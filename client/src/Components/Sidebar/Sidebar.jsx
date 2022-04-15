@@ -1,0 +1,88 @@
+import React from 'react'
+import './Sidebar.css'
+import { useState } from 'react';
+
+const Sidebar = ()=>{
+
+    const [togglebar,setTogglebar] = useState("sidebar close");
+
+    return(
+        <>
+            <nav className={togglebar}>
+<header>
+  <div className="image-text">
+    <span className="image">
+    </span>
+    <div className="text logo-text">
+      <span className="name">Digital Library</span>
+    </div>
+  </div>
+  <i className="bx bx-chevron-right toggle" onClick={(event)=>{
+      event.preventDefault();
+
+      if(togglebar === "sidebar close"){
+        setTogglebar("sidebar")
+      }
+      else{
+        setTogglebar("sidebar close")
+      }
+      
+  }} />
+</header>
+<div className="menu-bar">
+  <div className="menu">
+    <li className="search-box" onClick={(event)=>{
+        event.preventDefault();
+        setTogglebar("sidebar");
+    }}>
+      <i className="bx bx-search icon" />
+      <input type="text" placeholder="Search..." />
+    </li>
+    <ul className="menu-links">
+      <li className="nav-links">
+        <a href="#">
+          <i className="bx bx-home-alt icon" />
+          <span className="text nav-text">Dashboard</span>
+        </a>
+      </li>
+      <li className="nav-links">
+        <a href="#">
+          <i className="bx bx-user icon" />
+          <span className="text nav-text">Profile</span>
+        </a>
+      </li>
+      <li className="nav-links">
+        <a href="#">
+          <i className="bx bx-bell icon" />
+          <span className="text nav-text">Notifications</span>
+        </a>
+      </li>
+      <li className="nav-links">
+        <a href="#">
+          <i className="bx bx-heart icon" />
+          <span className="text nav-text">Likes</span>
+        </a>
+      </li>
+      <li className="nav-links">
+        <a href="#">
+          <i className="bx bx-wallet icon" />
+          <span className="text nav-text">Fines</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div className="bottom-content">
+    <li className>
+      <a href="#">
+        <i className="bx bx-log-out icon" />
+        <span className="text nav-text">Logout</span>
+      </a>
+    </li>
+  </div>
+</div>
+</nav>
+        </>
+    )
+}
+
+export default Sidebar;
