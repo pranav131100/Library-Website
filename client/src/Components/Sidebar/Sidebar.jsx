@@ -2,12 +2,18 @@ import React from 'react'
 import './Sidebar.css'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Popup from '../login_registeration/Popup';
+import SignIn from '../login_registeration/SignIn';
+import SignUp from '../login_registeration/SignUp';
+
 
 const Sidebar = ()=>{
 
     const [togglebar,setTogglebar] = useState("sidebar close");
     const [login,setLogin] = useState(true);
 
+    const [ltrigger,setltrigger] = useState(true);
+    const [rtrigger,setrtrigger] = useState(false);
 
 
     return(
@@ -104,6 +110,13 @@ const Sidebar = ()=>{
   
 </div>
 </nav>
+<Popup trigger = {ltrigger} text = "Sign In" setTrigger = {setltrigger}>
+              <SignIn  setlogin = {setltrigger} setregister = {setrtrigger}></SignIn>
+          </Popup>
+
+          <Popup trigger = {rtrigger} text = "Sign Up" setTrigger = {setrtrigger}>
+              <SignUp  setlogin = {setltrigger} setregister = {setrtrigger}></SignUp>
+          </Popup>
         </>
     )
 }
