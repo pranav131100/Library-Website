@@ -1,10 +1,14 @@
 import React from 'react'
 import './Sidebar.css'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Sidebar = ()=>{
 
     const [togglebar,setTogglebar] = useState("sidebar close");
+    const [login,setLogin] = useState(true);
+
+
 
     return(
         <>
@@ -40,16 +44,22 @@ const Sidebar = ()=>{
     </li>
     <ul className="menu-links">
       <li className="nav-links">
-        <a href="#">
+      <Link to = "/dashboard">
+      <a href="#">
           <i className="bx bx-home-alt icon" />
           <span className="text nav-text">Dashboard</span>
         </a>
+      </Link>
+        
       </li>
       <li className="nav-links">
-        <a href="#">
+      <Link to = "/profile">
+      <a href="#">
           <i className="bx bx-user icon" />
           <span className="text nav-text">Profile</span>
         </a>
+      </Link>
+        
       </li>
       <li className="nav-links">
         <a href="#">
@@ -71,7 +81,9 @@ const Sidebar = ()=>{
       </li>
     </ul>
   </div>
-  <div className="bottom-content">
+  {
+    login ? 
+    <div className="bottom-content">
     <li className>
       <a href="#">
         <i className="bx bx-log-out icon" />
@@ -79,6 +91,17 @@ const Sidebar = ()=>{
       </a>
     </li>
   </div>
+  :
+  <div className="bottom-content">
+    <li className>
+      <a href="#">
+        <i className="bx bx-log-in icon" />
+        <span className="text nav-text">Login</span>
+      </a>
+    </li>
+  </div>
+  }
+  
 </div>
 </nav>
         </>

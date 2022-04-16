@@ -1,6 +1,7 @@
 import React from "react";
 import '../Sidebar/Sidebar.css'
 import {Carousel} from 'react-bootstrap'
+import Footer from "../Sidebar/Footer";
 
 const Home = ()=>{
     return(
@@ -115,7 +116,10 @@ const Home = ()=>{
             </div>
           </div>
         </div>
+        <Footer></Footer>
       </section>
+      
+      
         </>
     )
 }
