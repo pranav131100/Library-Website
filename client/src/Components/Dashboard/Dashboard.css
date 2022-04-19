@@ -1,0 +1,7 @@
+.nav-pills > li > button.active {
+    background-color: #6d9875 !important;
+}
+
+.nav-pills > li > button{
+    color: #f6f6f6 !important;
+}

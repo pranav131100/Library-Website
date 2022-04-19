@@ -19,7 +19,7 @@ const Dashboard = ()=>{
         <div >
         <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist" style={{margin:"2rem"}}>
           <li className="nav-item" id = "nav1" role="presentation">
-            <button className="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" >All</button>
+            <button className="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">All</button>
           </li>
           <li className="nav-item" id = "nav2" role="presentation">
             <button className="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" >Engineering</button>

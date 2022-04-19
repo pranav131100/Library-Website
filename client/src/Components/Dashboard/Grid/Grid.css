@@ -37,7 +37,7 @@ img {
 }
 
 .btn {
-  color: #6d9785;
+  color: #f6f6f6;
   padding: 0.8rem;
   font-size: 14px;
   text-transform: uppercase;
@@ -52,6 +52,8 @@ img {
 
 .btn:hover {
   background-color: rgba(255, 255, 255, 0.12);
+  color:#d9cab3;
+  font-weight: bolder;
 }
 
 .cards {
