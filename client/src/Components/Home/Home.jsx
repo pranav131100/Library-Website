@@ -2,13 +2,14 @@ import React from "react";
 import '../Sidebar/Sidebar.css'
 import {Carousel} from 'react-bootstrap'
 import Footer from "../Sidebar/Footer";
+import { Link } from "react-router-dom";
 
 const Home = ()=>{
     return(
         <>
         
              <section className="home">
-        <div className="text">Digital Library</div>
+        <div className="text"><Link to = "/" style = {{textDecoration:"none",color:"#f6f6f6"}}><span className="name">Digital Library</span></Link></div>
         <div className="py">
         <Carousel>
   <Carousel.Item>

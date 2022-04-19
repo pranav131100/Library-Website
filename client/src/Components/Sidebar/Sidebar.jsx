@@ -24,7 +24,8 @@ const Sidebar = ()=>{
     <span className="image">
     </span>
     <div className="text logo-text">
-      <span className="name">Digital Library</span>
+    <Link to = "/" style = {{textDecoration:"none",color:"#f6f6f6"}}><span className="name">Digital Library</span></Link>
+      
     </div>
   </div>
   <i className="bx bx-chevron-right toggle" onClick={(event)=>{
@@ -109,7 +110,6 @@ const Sidebar = ()=>{
   }
   
 </div>
-</nav>
 <Popup trigger = {ltrigger} text = "Sign In" setTrigger = {setltrigger}>
               <SignIn  setlogin = {setltrigger} setregister = {setrtrigger}></SignIn>
           </Popup>
@@ -117,6 +117,8 @@ const Sidebar = ()=>{
           <Popup trigger = {rtrigger} text = "Sign Up" setTrigger = {setrtrigger}>
               <SignUp  setlogin = {setltrigger} setregister = {setrtrigger}></SignUp>
           </Popup>
+</nav>
+
         </>
     )
 }

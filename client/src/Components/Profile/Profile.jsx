@@ -1,12 +1,13 @@
 import React from 'react'
 import Footer from '../Sidebar/Footer';
+import { Link } from 'react-router-dom';
 
 const Profile = ()=>{
     return(
         <>
 
 <section className="home">
-             <div className="text">Digital Library</div>
+             <div className="text"><Link to = "/" style = {{textDecoration:"none",color:"#f6f6f6"}}><span className="name">Digital Library</span></Link></div>
         <div className="py">
         
         </div>
@@ -14,14 +15,14 @@ const Profile = ()=>{
         <div>
              <div className="container">
         <div className="row">
-          <div className="col-md-4 mt-1">
-            <div className="card text-center sidebar">
-              <div className="card-body">
+          <div className="col-md-4 mt-1" >
+            <div className="card text-center sidebar" style={{background:"#212121",border:"none"}}>
+              <div className="card-body" style={{background:"#212121"}}>
                 {/* <img src="C:\Users\shree\Downloads\profile image.png" className="rounded-circle" width={150} /> */}
                 <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" className="rounded-circle" width={150} />
 
                 <div className="mt-3">
-                  <h3>Profile</h3>
+                  <h3 style={{color:"#d9cab3"}}>Profile</h3>
                   <br />
                   <br />
                   <br />
@@ -53,7 +54,7 @@ const Profile = ()=>{
             </div>
           </div>
           <div className="col-md-8 mt-1">
-            <div className="card mb-3 content">
+            <div className="card mb-3 content" style={{background:"#212121", border:"none"}}>
               <h2 className="m-3 pt-3">Profile</h2>
               <div className="card-body">
                 <div className="row">
