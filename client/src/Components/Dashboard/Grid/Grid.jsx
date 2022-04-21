@@ -13,8 +13,6 @@ const Grid = ()=>{
             <Card></Card>
             <Card></Card>
             <Card></Card>
-            <Card></Card>
-            <Card></Card>
           </ul>
         </div>
       </div>

@@ -1,8 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../Sidebar/Footer';
 import { Link } from 'react-router-dom';
+import Axios from 'axios'
+
 
 const Profile = ()=>{
+
+  const [email,setEmail] = useState("");
+  const [name,setName] = useState("");
+
+
+  useEffect(()=>{
+
+    const userId = localStorage.getItem("UserId");
+
+
+      Axios.get(`http://localhost:7000/User/get/${userId}`).then((result)=>{
+        setName(result.data.name);
+        setEmail(result.data.email);
+      }).catch((err)=>{
+        console.log(err);
+      })
+
+  },[])
+
     return(
         <>
 
@@ -22,7 +43,7 @@ const Profile = ()=>{
                 <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" className="rounded-circle" width={150} />
 
                 <div className="mt-3">
-                  <h3 style={{color:"#d9cab3"}}>Profile</h3>
+                  <h3 style={{color:"#d9cab3"}}>{name}</h3>
                   <br />
                   <br />
                   <br />
@@ -62,7 +83,7 @@ const Profile = ()=>{
                     <h5>Name</h5>
                   </div>
                   <div className="col-mod-9 text-secondary">
-                   Profile
+                   {name}
                   </div>
                 </div>
                 <hr />
@@ -71,7 +92,7 @@ const Profile = ()=>{
                     <h5>Email</h5>
                   </div>
                   <div className="col-mod-9 text-secondary">
-                    pranav.sgjnsfs
+                    {email}
                   </div>
                 </div>
 

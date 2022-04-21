@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Sidebar.css'
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Popup from '../login_registeration/Popup';
 import SignIn from '../login_registeration/SignIn';
 import SignUp from '../login_registeration/SignUp';
@@ -10,10 +10,23 @@ import SignUp from '../login_registeration/SignUp';
 const Sidebar = ()=>{
 
     const [togglebar,setTogglebar] = useState("sidebar close");
-    const [login,setLogin] = useState(true);
+    const [log,setLog] = useState(false);
+   
+    const navigate = useNavigate();
 
-    const [ltrigger,setltrigger] = useState(true);
+    const [ltrigger,setltrigger] = useState(false);
     const [rtrigger,setrtrigger] = useState(false);
+
+    useEffect(()=>{
+      const token = localStorage.getItem('Token');
+  
+      if(token){
+        setLog(true);
+      }
+  
+    },[])
+
+    
 
 
     return(
@@ -59,7 +72,10 @@ const Sidebar = ()=>{
       </Link>
         
       </li>
-      <li className="nav-links">
+
+      {
+        log ? 
+        <li className="nav-links">
       <Link to = "/profile">
       <a href="#">
           <i className="bx bx-user icon" />
@@ -67,7 +83,23 @@ const Sidebar = ()=>{
         </a>
       </Link>
         
+      </li> :
+
+      <li className="nav-links">
+      <Link to = "#" onClick={()=>{
+        setltrigger(true);
+      }}>
+      <a href="#">
+          <i className="bx bx-user icon" />
+          <span className="text nav-text">Profile</span>
+        </a>
+      </Link>
+        
       </li>
+      
+      }
+
+      
       <li className="nav-links">
         <a href="#">
           <i className="bx bx-bell icon" />
@@ -89,22 +121,36 @@ const Sidebar = ()=>{
     </ul>
   </div>
   {
-    login ? 
+    log ? 
     <div className="bottom-content">
     <li className>
-      <a href="#">
+    <Link to = "#" onClick = {()=>{
+                  localStorage.removeItem("Token");
+                  localStorage.removeItem("UserId");
+                  alert("Logout Successful");
+                  navigate('/');
+                  window.location.reload(false);
+                }}>
+    <a href="#">
         <i className="bx bx-log-out icon" />
         <span className="text nav-text">Logout</span>
       </a>
+    </Link>
+      
     </li>
   </div>
   :
   <div className="bottom-content">
     <li className>
-      <a href="#">
+    <Link to = "#" onClick = {()=>{
+                  setltrigger(true);
+                }}>
+    <a href="#">
         <i className="bx bx-log-in icon" />
         <span className="text nav-text">Login</span>
-      </a>
+    </a>
+    </Link>
+      
     </li>
   </div>
   }

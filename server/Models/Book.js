@@ -9,6 +9,22 @@ author:{
     type:String,
     required:true
 },
+type:{
+ type:String,
+ required:true
+},
+edition:{
+    type:String,
+   
+},
+description:{
+    type:String,
+    required:true
+},
+avail:{
+    type:Number,
+    required:true
+},
 img:{
     type:String,
     required:true
@@ -16,6 +32,9 @@ img:{
 link:{
     type:String,
     required:true
+},
+about:{
+    type:String
 }
 
 })

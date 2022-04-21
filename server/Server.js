@@ -41,11 +41,12 @@ app.get("/",(req,res)=>{
     res.send("Welcome to Backend");
 })
 
+app.use('/User',require('./Routes/User'))
 // app.use('/Booking',require('./Routes/Booking'))
 // app.use('/Blog',require('./Routes/Blog'))
 // app.use('/Chef',require('./Routes/Chef'))
 // app.use('/Menu',require('./Routes/Menu'))
-// app.use('/User',require('./Routes/User'))
+
 // // app.use('/Static',require('./Routes/Static'))
 
 app.listen(7000,()=>{
