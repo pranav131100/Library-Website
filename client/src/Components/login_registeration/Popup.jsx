@@ -12,7 +12,7 @@ const Popup = (props)=>{
             <div className="popup">
                 <div className="popup-inner">
                     <div style = {{display:"flex",alignItems:"center",justifyContent:"center"}}>
-                    <div className = "title" ><h3><b>{props.text}</b></h3></div>
+                    <div className = "title" style={{color:"#f1f1f1"}} ><h3><b>{props.text}</b></h3></div>
                     </div>
                    
                     <button className="close-btn" onClick = {(event)=>{

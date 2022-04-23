@@ -15,8 +15,8 @@ const Footer = ()=>{
                 <p><img src="https://img.icons8.com/ios-filled/14/eeeeee/mail.png" />noreply@reply.io</p>
                 <p><img src="https://img.icons8.com/ios-filled/14/eeeeee/clock.png" />8:00 AM – 8:00 PM</p>
               </address>
-              <h1> Our Newsletter</h1>
-              <a href="#" className="footer-button" role="button">Subscribe</a>
+              {/* <h1> Our Newsletter</h1>
+              <a href="#" className="footer-button" role="button">Subscribe</a> */}
             </div>
             <div className="footer-columns">
               <h1>Overview</h1>

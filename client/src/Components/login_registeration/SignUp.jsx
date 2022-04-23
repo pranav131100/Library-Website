@@ -77,7 +77,7 @@ const SignUp = (props) => {
                         
                         <Col>
                         
-                        <Button className="btn custom-btn" type="submit" onClick = {onRegister}>Sign Up</Button>
+                        <Button className="btn custom-btn" style = {{border:"none"}} type="submit" onClick = {onRegister}>Sign Up</Button>
                      
                            
                         </Col>
@@ -91,7 +91,7 @@ const SignUp = (props) => {
     <Link to = "#"  style = {{textDecoration:"none"}} onClick ={()=>{
    props.setlogin(true);
    props.setregister(false);
- }}><span style = {{color:"black",textDecoration:"none"}}>Already a User?</span></Link>
+ }}><span style = {{color:"#f1f1f1",textDecoration:"none"}}>Already a User?</span></Link>
  </div>
     </>
   )

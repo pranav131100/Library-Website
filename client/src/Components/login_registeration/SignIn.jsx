@@ -60,7 +60,7 @@ const SignIn = (props) => {
 
                         <Form.Group as={Row} className="mb-3" controlId="formHorizontalCheck">
                             <Col>
-                                <Form.Check label="Remember me" />
+                                <Form.Check label="Remember me" style={{color:"#f1f1f1"}} />
                             </Col>
                         </Form.Group>
 
@@ -78,7 +78,7 @@ const SignIn = (props) => {
                         
                         <Col>
                         
-                        <Button className="btn custom-btn" type="submit" onClick = {onLogin}>Sign In</Button>
+                        <Button className="btn custom-btn" type="submit" style = {{border:"none"}} onClick = {onLogin}>Sign In</Button>
                      
                            
                         </Col>
@@ -92,7 +92,7 @@ const SignIn = (props) => {
     <Link to = "#"  style = {{textDecoration:"none"}} onClick ={()=>{
    props.setlogin(false);
    props.setregister(true);
- }}><span style = {{color:"black",textDecoration:"none"}}>New User ?</span></Link>
+ }}><span style = {{color:"#f1f1f1",textDecoration:"none"}}>New User ?</span></Link>
  </div>
         </>
     )

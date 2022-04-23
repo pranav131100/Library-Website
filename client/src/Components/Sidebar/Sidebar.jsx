@@ -102,22 +102,22 @@ const Sidebar = ()=>{
       
       <li className="nav-links">
         <a href="#">
-          <i className="bx bx-bell icon" />
-          <span className="text nav-text">Notifications</span>
+          <i className="bx bx-info-circle icon" />
+          <span className="text nav-text">About Us</span>
         </a>
       </li>
       <li className="nav-links">
         <a href="#">
-          <i className="bx bx-heart icon" />
-          <span className="text nav-text">Likes</span>
+          <i className="bx bx-phone icon" />
+          <span className="text nav-text">Contact Us</span>
         </a>
       </li>
-      <li className="nav-links">
+      {/* <li className="nav-links">
         <a href="#">
           <i className="bx bx-wallet icon" />
           <span className="text nav-text">Fines</span>
         </a>
-      </li>
+      </li> */}
     </ul>
   </div>
   {

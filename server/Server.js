@@ -42,6 +42,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use('/User',require('./Routes/User'))
+app.use('/Book',require("./Routes/Book"))
 // app.use('/Booking',require('./Routes/Booking'))
 // app.use('/Blog',require('./Routes/Blog'))
 // app.use('/Chef',require('./Routes/Chef'))
