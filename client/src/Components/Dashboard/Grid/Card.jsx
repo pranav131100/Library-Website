@@ -1,6 +1,9 @@
 import React from "react";
+import Axios from "axios";
 
 const Card = (props)=>{
+
+
     return(
         <>
              <li className="cards_item">
@@ -21,7 +24,23 @@ const Card = (props)=>{
                       <h6 style={{color:"#f1f1f1"}}>Availablity : {props.avail}</h6>
                     </>
                     :
-                    <><button className="btn card_btn">Reserve</button></>
+                    <><button className="btn card_btn" onClick = {(event)=>{
+                      event.preventDefault();
+                      console.log("Pranav");
+                      const UserId = localStorage.getItem('UserId');
+
+
+                    Axios.post("http://localhost:7000/Reserve/insert",{
+                      book_id:props.id,
+                      user_id:UserId,
+                      title:props.title,
+                      author:props.author,
+                      date:Date.now()
+                    }).then((result)=>{
+                      console.log(result);
+                      alert("Reservation Done");
+                     })
+                    }}>Reserve</button></>
                   }
                   
                 </div>

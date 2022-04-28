@@ -11,6 +11,7 @@ const Profile = ()=>{
   const [name,setName] = useState("");
   const [reserves,setReserves] = useState([]);
   const [borrows,setBorrows]  = useState([]);
+ const [details,setDetails] = useState([]);
 
 
   useEffect(()=>{
@@ -26,6 +27,10 @@ const Profile = ()=>{
       }).catch((err)=>{
         console.log(err);
       })
+
+     Axios.get(`http://localhost:7000/Reserve/get/${userId}`).then((result)=>{
+      setDetails(result.data);
+     })
 
       
 
@@ -109,10 +114,10 @@ const Profile = ()=>{
             <h2 className="m-3" style={{color:"#6d9875",background:"#212121"}}>Book Reservations</h2>
            
            {
-             reserves.map((val)=>{
+             details.map((val)=>{
                return(
                  <>
-                   <Reservations></Reservations>
+                   <Reservations title = {val.title} id = {val._id} author = {val.author}  date = {val.date}></Reservations>
                  </>
                )
              })

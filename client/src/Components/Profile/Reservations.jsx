@@ -1,8 +1,18 @@
+import  Axios from "axios";
 import React, { useEffect } from "react";
 
 const Reservations = (props)=>{
 
+    const onCancel = (event)=>{
+      
+        event.preventDefault();
     
+        Axios.delete(`http://localhost:7000/Reserve/delete/${props.id}`).then(()=>{
+          alert("Reservation Cancelled");
+          window.location.reload(false);
+        })
+      
+    }
 
     return(
         <>
@@ -24,7 +34,7 @@ const Reservations = (props)=>{
                     <h5 style={{color:"#d9cab3"}}>Title</h5>
                   </div>
                   <div className="col-mod-9 text-secondary">
-                    {props.date}
+                    {props.title}
                   </div>
                 </div>
                 <hr/>
@@ -33,7 +43,7 @@ const Reservations = (props)=>{
                     <h5 style={{color:"#d9cab3"}}>Author</h5>
                   </div>
                   <div className="col-mod-9 text-secondary">
-                   {props.time}
+                   {props.author}
                   </div>
                 </div>
                 <hr/>
@@ -42,13 +52,13 @@ const Reservations = (props)=>{
                     <h5 style={{color:"#d9cab3"}}>Reservation Time</h5>
                   </div>
                   <div className="col-mod-9 text-secondary">
-                    {props.guests}
+                    {props.time}
                   </div>
                   <hr />
                   <br />
         
                   <div>
-                  <button className="btn btn-danger">Cancel</button>
+                  <button className="btn btn-danger" onClick={onCancel}>Cancel</button>
                   </div>
                 </div>
               </div>

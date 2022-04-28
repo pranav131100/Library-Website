@@ -25,7 +25,7 @@ const Grid = (props)=>{
                 return(
                   <>
                     <Card title = {val.title} img = {val.img} description = {val.description} author = {val.author}
-                    edition = {val.edition} link = {val.link} avail = {val.avail}
+                    edition = {val.edition} link = {val.link} avail = {val.avail} id ={val._id}
                     ></Card>
                   </>
                 )
