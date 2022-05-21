@@ -33,18 +33,18 @@ const SignUp = (props) => {
   return (
     <>
 
-      <Container className="justify-content-md-center mt-3" style={{ width: '700px' }}>
+      <Container className="justify-content-md-center mt-3" >
        
         <Row>
           <Form>
-            <Form.Group as={Row} className="mb-3 sup" style={{maxWidth:"50%"}} controlId="formHorizontalName">
+            <Form.Group as={Row} className="mb-3 sup" style={{maxWidth:"120%"}} controlId="formHorizontalName">
               <Col>
                 <Form.Control type="text" placeholder="Name"  value = {name} onChange = {(event)=>{
                                     setName(event.target.value);
                                 }}/>
               </Col>
             </Form.Group>
-            <Form.Group as={Row} className="mb-3 sup" style={{maxWidth:"50%"}} controlId="formHorizontalEmail">
+            <Form.Group as={Row} className="mb-3 sup" style={{maxWidth:"120%"}} controlId="formHorizontalEmail">
               <Col>
                 <Form.Control type="email" placeholder="Email"  value = {email} onChange = {(event)=>{
                                     setEmail(event.target.value);
@@ -52,7 +52,7 @@ const SignUp = (props) => {
               </Col>
             </Form.Group>
 
-            <Form.Group as={Row} className="mb-3 sup" style={{maxWidth:"50%"}} controlId="formHorizontalPassword">
+            <Form.Group as={Row} className="mb-3 sup" style={{maxWidth:"120%"}} controlId="formHorizontalPassword">
               <Col>
                 <Form.Control type="password" placeholder="Password"  value = {password} onChange = {(event)=>{
                                     setPassword(event.target.value);
@@ -60,7 +60,7 @@ const SignUp = (props) => {
               </Col>
             </Form.Group>
 
-            <Form.Group as={Row} className="mb-3 sup" style={{maxWidth:"50%"}} controlId="formHorizontalcPassword">
+            <Form.Group as={Row} className="mb-3 sup" style={{maxWidth:"120%"}} controlId="formHorizontalcPassword">
               <Col>
                 <Form.Control type="password" placeholder="Confirm Password"  value = {conpass} onChange = {(event)=>{
                                     setConPass(event.target.value);

@@ -37,14 +37,14 @@ const SignIn = (props) => {
 
     return (
         <>
-            <Container className="justify-content-md-center mt-3" style={{ width: '700px' }}>
+            <Container className="justify-content-md-center mt-3" >
                 {/* <Row className="mb-3"><Card.Title style={{ fontSize: '30px' }}>Sign In</Card.Title></Row> */}
 
                 <Row>
                     <Form>
                         <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
                             <Col>
-                                <Form.Control type="email" placeholder="Email" style = {{maxWidth: "50%"}} value = {email} onChange = {(event)=>{
+                                <Form.Control type="email" placeholder="Email" style = {{maxWidth: "120%"}} value = {email} onChange = {(event)=>{
                                     setEmail(event.target.value);
                                 }}/>
                             </Col>
@@ -52,7 +52,7 @@ const SignIn = (props) => {
 
                         <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
                             <Col>
-                                <Form.Control type="password" placeholder="Password"  style = {{maxWidth: "50%"}}  value = {password} onChange = {(event)=>{
+                                <Form.Control type="password" placeholder="Password"  style = {{maxWidth: "120%"}}  value = {password} onChange = {(event)=>{
                                     setPassword(event.target.value);
                                 }}/>
                             </Col>
