@@ -101,16 +101,22 @@ const Sidebar = ()=>{
 
       
       <li className="nav-links">
+        <Link to = "/about">
         <a href="#">
           <i className="bx bx-info-circle icon" />
           <span className="text nav-text">About Us</span>
         </a>
+        </Link>
+        
       </li>
       <li className="nav-links">
-        <a href="#">
+      <Link to = "/contact">
+      <a href="#">
           <i className="bx bx-phone icon" />
           <span className="text nav-text">Contact Us</span>
         </a>
+      </Link>
+        
       </li>
       {/* <li className="nav-links">
         <a href="#">
